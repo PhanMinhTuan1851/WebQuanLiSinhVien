@@ -49,6 +49,30 @@
 
 
 
+
+<script>
+    function onlyNumberKey(evt) {
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode;
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
+
+<script>
+function lettersOnly(evt) {
+       evt = (evt) ? evt : event;
+       var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+          ((evt.which) ? evt.which : 0));
+       if (charCode > 32 && (charCode < 65 || charCode > 90) &&
+          (charCode < 97 || charCode > 122)) {
+          alert("Chỉ được nhập kí tự thường, hoa và dấu cách");
+          return false;
+       }
+       return true;
+     }
+</script>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -87,17 +111,17 @@
                     
                     <div alight="left" >
                         <label class="form-label">Ten Hoc Sinh</label>
-                        <input type="text" class="form-control" placeholder="TenHocSinh" value="<%=rs.getString("sname") %>" name="sname" id="sname" required >
+                        <input type="text" class="form-control" placeholder="TenHocSinh" value="<%=rs.getString("sname") %>" name="sname" id="sname" required onkeypress="return lettersOnly(event)" >
                     </div>
                         
                     <div alight="left" >
                         <label class="form-label">Khoa Hoc</label>
-                        <input type="text" class="form-control" placeholder="KhoaHoc" value="<%=rs.getString("khoahoc") %>" name="khoahoc" id="khoahoc" required >
+                        <input type="text" class="form-control" placeholder="KhoaHoc" value="<%=rs.getString("khoahoc") %>" name="khoahoc" id="khoahoc" required  >
                     </div>
                     
                     <div alight="left" >
                         <label class="form-label">Hoc Phi</label>
-                        <input type="text" class="form-control" placeholder="HocPhi" value="<%=rs.getString("hocphi") %>" name="hocphi" id="hocphi" required >
+                        <input type="text" class="form-control" placeholder="HocPhi" value="<%=rs.getString("hocphi") %>" name="hocphi" id="hocphi" required onkeypress="return onlyNumberKey(event)" >
                     </div>  
                    
                    
@@ -106,11 +130,11 @@
                    
                         </br>                   
                     <div alight="right" >
-                        <input type="submit" id="submit" value="submit" name="submit" class="btn btn-info">
-                        <input type="reset" id="reset" value="reset" name="reset" class="btn btn-warning">
+                        <input type="submit" id="submit" value="Xác nhận thay đổi" name="submit" class="btn btn-info">
+                        <input type="reset" id="reset" value="Xóa ghi chú" name="reset" class="btn btn-warning">
                     </div>
-                        <div align="right">
-                            <p><a href="index.jsp">Quay lai</a></p>
+                        <div align="left">
+                            <button type="button" class="btn btn-light"><a href="backup.jsp">Quay lại trang quản lí</a></button>
                         </div>
                         
                         
