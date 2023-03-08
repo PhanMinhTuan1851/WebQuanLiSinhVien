@@ -1,6 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
 
+<!--Kết nối đến SQL -->
+
+
 <%
     if (request.getParameter("submit") != null) {
         String id = request.getParameter("id");
@@ -41,6 +44,8 @@
 %>
 
 
+<!--Script kiểm tra lỗi nhập liệu -->
+
 <script>
     function onlyNumberKey(evt) {
         var ASCIICode = (evt.which) ? evt.which : evt.keyCode;
@@ -66,7 +71,7 @@ function lettersOnly(evt) {
 
 
 
-
+<!--Thiết kế giao diện để tương tác dữ liệu-->
 <!DOCTYPE html>
 <html>
     <head>
@@ -118,14 +123,14 @@ function lettersOnly(evt) {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Ten Hoc Sinh</th>
-                                <th>Khoa Hoc</th>
-                                <th>Hoc Phi</th>
-                                <th>Chinh sua</th>
-                                <th>Xoa</th>
+                                <th>Tên học sinh</th>
+                                <th>Khóa học</th>
+                                <th>Học phí</th>
+                                <th>Chỉnh sửa</th>
+                                <th>Xóa</th>
                             </tr>
 
-
+<!--Truyền tải lệnh SQL thêm dữ liệu -->
 
                             <%                                Connection con;
                                 PreparedStatement pst;
@@ -149,8 +154,8 @@ function lettersOnly(evt) {
                                 <td><%=rs.getString("sname")%></td>
                                 <td><%=rs.getString("khoahoc")%></td>
                                 <td><%=rs.getString("hocphi")%></td>
-                                <td><a href="update.jsp?id=<%=id%>"> Chinh sua</a></td>
-                                <td><a href="delete.jsp?id=<%=id%>"> Xoa </a> </td>
+                                <td><a href="update.jsp?id=<%=id%>"> Chỉnh sửa</a></td>
+                                <td><a href="delete.jsp?id=<%=id%>"> Xóa </a> </td>
                             </tr>
 
                             <%

@@ -2,6 +2,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
 
+<!--Kết nối SQL và lệnh thay đổi dữ liệu -->
+
+
 <%
     if(request.getParameter("submit")!= null)
     {
@@ -48,7 +51,7 @@
 %>
 
 
-
+<!--Script Kiểm tra lỗi nhập liệu -->
 
 <script>
     function onlyNumberKey(evt) {
@@ -58,6 +61,8 @@
         return true;
     }
 </script>
+
+<!--Script kiểm tra chỉ được dùng chữ-->
 
 <script>
 function lettersOnly(evt) {
@@ -73,6 +78,9 @@ function lettersOnly(evt) {
      }
 </script>
 
+
+<!--Thiết kế trang cập nhập thông tin học sinh -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -81,10 +89,10 @@ function lettersOnly(evt) {
         
         <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-               
+        
     </head>
     <body>
-        <h1>Cap nhap thong tin hoc sinh</h1>
+        <h1>Cập nhập thông tin học sinh</h1>
         <div class="row"
         <div class="col-sm-4">
                 <form method="POST" action="#">
@@ -110,17 +118,17 @@ function lettersOnly(evt) {
         
                     
                     <div alight="left" >
-                        <label class="form-label">Ten Hoc Sinh</label>
+                        <label class="form-label">Tên học sinh</label>
                         <input type="text" class="form-control" placeholder="TenHocSinh" value="<%=rs.getString("sname") %>" name="sname" id="sname" required onkeypress="return lettersOnly(event)" >
                     </div>
                         
                     <div alight="left" >
-                        <label class="form-label">Khoa Hoc</label>
+                        <label class="form-label">Khóa học</label>
                         <input type="text" class="form-control" placeholder="KhoaHoc" value="<%=rs.getString("khoahoc") %>" name="khoahoc" id="khoahoc" required  >
                     </div>
                     
                     <div alight="left" >
-                        <label class="form-label">Hoc Phi</label>
+                        <label class="form-label">Học phí</label>
                         <input type="text" class="form-control" placeholder="HocPhi" value="<%=rs.getString("hocphi") %>" name="hocphi" id="hocphi" required onkeypress="return onlyNumberKey(event)" >
                     </div>  
                    

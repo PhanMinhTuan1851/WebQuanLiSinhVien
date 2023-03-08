@@ -1,4 +1,8 @@
 <%@page import="java.sql.*" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+<!--Kết nối với SQL và lệnh xóa dữ liệu-->
+
 
 <%
         String id = request.getParameter("id");
@@ -22,6 +26,6 @@
             alert("Da xoa du lieu");
             
         </script>
-        <p><a href="index.jsp">Quay lai</a></p>
+        <p><a href="backup.jsp">Quay lai</a></p>
             
         
