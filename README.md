@@ -63,6 +63,7 @@ Website bao gồm các chức năng như sau:
 ## Cách tải về và sử dụng
 * Cài đặt Netbean Apache bản 16/17
 * Cài đặt TomCat Server 
+* Cài đặt MySQL
 * Tải từ nhánh Test / Main
 
 1. Sau khi cài đặt xong Netbean và Tomcat, hãy vào Netbean.
@@ -72,7 +73,9 @@ Website bao gồm các chức năng như sau:
 5. Sau đó click ok.
 7. Tải source code về.
 8. Add folder "WebQuanLiSinhVien" vào trong "File" của Netbean.
-9. Hoàn tất cài đặt.
+9. Vào "Data", chọn "Add new Database".
+10. Kết nối Netbean vào MySQL.
+11. Hoàn tất cài đặt, chạy thử để kiểm tra.
 
 ## Người thực hiện
 
