@@ -67,7 +67,7 @@ Website bao gồm các chức năng như sau:
 * Tải từ nhánh Test / Main
 
 1. Sau khi cài đặt xong Netbean và Tomcat, hãy vào Netbean.
-2. Ở cửa sổ bên trái, chọn server.
+2. Ở cửa sổ bên trái, chọn "Services".
 3. Click chuột phải vào server, chọn "Add new server".
 4. Cài đặt server, chọn Tomcat server.
 5. Sau đó click ok.
