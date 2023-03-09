@@ -63,7 +63,16 @@ Website bao gồm các chức năng như sau:
 ## Cách tải về và sử dụng
 * Cài đặt Netbean Apache bản 16/17
 * Cài đặt TomCat Server 
-* Tải từ nhánh Test
+* Tải từ nhánh Test / Main
+
+1. Sau khi cài đặt xong Netbean và Tomcat, hãy vào Netbean.
+2. Ở cửa sổ bên trái, chọn server.
+3. Click chuột phải vào server, chọn "Add new server".
+4. Cài đặt server, chọn Tomcat server.
+5. Sau đó click ok.
+7. Tải source code về.
+8. Add folder "WebQuanLiSinhVien" vào trong "File" của Netbean.
+9. Hoàn tất cài đặt.
 
 ## Người thực hiện
 
