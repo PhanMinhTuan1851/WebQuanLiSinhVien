@@ -72,7 +72,7 @@ Website bao gồm các chức năng như sau:
 4. Cài đặt server, chọn Tomcat server.
 5. Sau đó click ok.
 7. Tải source code về.
-8. Add folder "WebQuanLiSinhVien" vào trong "File" của Netbean.
+8. Add folder "WebQuanLiSinhVien" vào trong "Properties" của Netbean.
 9. Vào "Data", chọn "Add new Database".
 10. Kết nối Netbean vào MySQL.
 11. Hoàn tất cài đặt, chạy thử để kiểm tra.
