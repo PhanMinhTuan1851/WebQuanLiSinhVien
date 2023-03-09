@@ -72,10 +72,18 @@ Website bao gồm các chức năng như sau:
 4. Cài đặt server, chọn Tomcat server.
 5. Sau đó click ok.
 7. Tải source code về.
-8. Add folder "WebQuanLiSinhVien" vào trong "Properties" của Netbean.
-9. Vào "Data", chọn "Add new Database".
-10. Kết nối Netbean vào MySQL.
-11. Hoàn tất cài đặt, chạy thử để kiểm tra.
+8. Di chuyển folder "WebQuanLiSinhVien" vào trong "Properties" của Netbean.
+9. Vào "Services", Click chuột phải vào "Database" chọn "New Connection".
+10. Kết nối dữ liệu với Database và click "Finish" khi hoàn tất
+11. Sau khi hoàn tất kết nối, click chuột phải vào server ở trong "database" và chọn connect.
+12. Tạo 1 Database, đặt tên là "schooll".
+13. Tạo Table "quanlisinhvien"
+14. Tạo các khóa: "ID" - INT - PK - NN / "sname" VARCHAR(255) / "khoahoc" VARCHAR(255) / "hocphi" INT
+15. Sau khi hoàn tất tạo database, hãy truy cập vào WebQuanLiSinhVien_PhanMinhTuan/Webs Pages/js/backup.jsp
+16. Ở dòng 7, "con = DriverManager.getConnection("jdbc:mysql://localhost/schooll", "root", "Satthu14t");". Hãy thay đổi tài khoản và mật khẩu sao cho trùng với tài khoản và mật khẩu khi người dùng cài đặt tại bước số 10.
+17. Tương tự cho dòng 135
+18. Thực hiện tương tự cho "delete.jsp" và "update.jsp"
+19. Hoàn tất, chạy thử để kiểm tra.
 
 ## Người thực hiện
 
